@@ -1,0 +1,4 @@
+db.sqlite3
+.idea
+api/migrations/**
+!api/migrations/__init__.py
