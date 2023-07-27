@@ -1,6 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
-
+from django.contrib.auth.models import AbstractUser
 
 class Quiz(models.Model):
     question = models.CharField(max_length=100)
@@ -20,7 +19,7 @@ class Answer(models.Model):
         return f"Question = {self.quiz}, Answer = {self.answer}"
 
 
-class User(User):
+class User(AbstractUser):
     age = models.IntegerField()
 
 
